@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio Times</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>    
+  </head>
+  <body>
+    <section>
+        <header>
+          <div class="content">
+            <div class="logo">
+              <a href="index.html"><img src = "img/logo.png" alt = "Logo do Azilados" width="75px" height="115px"></a>
+            </div>
+            <div class="menu"> 
+              <nav>
+                <a href="index.html"> Home </a>
+                <a href="sobre.html"> Sobre </a>
+                <a href="https://instagram.com/aziladosa.c_?igshid=NmNmNjAwNzg="> Instagram </a>
+              </nav>
+            </div>
+          </div>
+        </header>
+    <section>
+    <br>
+    <section>
+      <div class="grid">
+
+        <div class="titulo">
+          <h2>Entre com os jogadores</h2>
+        </div>
+          
+        <div class="lineInput">
+            <label>Jogador: </label>
+            <input type="text" id="jogador">
+          </div>
+          
+          <div class="lineInput">
+            <label>Posição: </label>
+            <input type="text" id="pos" placeholder="LD ZAG LE MEI ATA">
+          </div>
+          <div class="btn">
+          <br>
+            <button type='button' onclick="jogador.salvar()" id="btn1">Adicionar</button>
+            <button type='button' onclick="jogador.cancelar()">Limpar Campo</button>
+          </div>
+        <div class="">
+          <table border="1">
+            <thead>
+              <th class="center">ID</th>
+              <th>Jogador</th>
+              <th>Posição</th>
+              <th class="center">Açoes</th>
+            </thead>
+            <tbody id="tbody" class="tdbody">
+              
+            </tbody>
+          </table>
+        </div>
+
+        <div class="">
+          <table border="1">
+            <thead>
+              <th class="center">ID</th>
+              <th>Jogador</th>
+              <th>Posição</th>
+              <th class="center">Açoes</th>
+            </thead>
+            <tbody id="time1" class="time1">
+              
+            </tbody>
+          </table>
+        </div>
+
+        <div class="">
+          <table border="1">
+            <thead>
+              <th class="center">ID</th>
+              <th>Jogador</th>
+              <th>Posição</th>
+              <th class="center">Açoes</th>
+            </thead>
+            <tbody id="time2" class="time2">
+              
+            </tbody>
+          </table>
+        </div>
+
+        <div class="">
+          <table border="1">
+            <thead>
+              <th class="center">ID</th>
+              <th>Jogador</th>
+              <th>Posição</th>
+              <th class="center">Açoes</th>
+            </thead>
+            <tbody id="time3" class="time3">
+              
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <br>
+    
+    <footer id = "rodape"> 
+            <span>Direitos de Autor. © 2022 Azilados, Inc. Todos os direitos reservados. <i class="fa-light fa-copyright"></i></span>
+    </footer>
+    
+    </body>
+</html>

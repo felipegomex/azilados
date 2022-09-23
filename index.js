@@ -39,7 +39,7 @@ class Jogador {
     listarTabela(){
         let tbody = document.getElementById('tbody');
         tbody.innerText = '';
-
+        
         for(let i = 0; i < this.arrayJogador.length; i++){
             let tr = tbody.insertRow();
 
@@ -56,29 +56,116 @@ class Jogador {
             imgEdit.src = 'img/edit.svg';
             imgEdit.setAttribute("onclick", "jogador.editar("+ JSON.stringify(this.arrayJogador[i]) +")");
 
-
             let imgRemover = document.createElement('img');
             imgRemover.src = 'img/delete.svg';
             imgRemover.setAttribute("onclick", "jogador.remover("+ this.arrayJogador[i].id +")");
 
             td_acoes.appendChild(imgEdit);
             td_acoes.appendChild(imgRemover);
+           
+        }
 
+        var times = ["Time 1","Time 2","Time 3"];
+        var sorteio = Math.floor(Math.random()*times.length);
+        console.log(times[sorteio]);
 
+        var sorte = times[sorteio];
+
+        //console.log("O último valor é:", this.arrayJogador[this.arrayJogador.length - 1]);
+
+        for(let i = 0; i < this.arrayJogador.length; i++){
+            console.log(this.arrayJogador[i]);   
+            console.log("O último valor é:",this.arrayJogador[this.arrayJogador.length - 1]);
+
+            if(sorte == "Time 1"){
+                if(this.arrayJogador[i] === this.arrayJogador[this.arrayJogador.length - 1]){
+
+                    let t1 = time1.insertRow();
+
+                    let t1_jogador = t1.insertCell();
+                    let t1_pos = t1.insertCell(); 
+                 
+                    t1_jogador.innerText = this.arrayJogador[i].nomeJogador;
+                    t1_pos.innerText = this.arrayJogador[i].pos;
+                }
+            } else if(sorte == "Time 2"){
+                if(this.arrayJogador[i] === this.arrayJogador[this.arrayJogador.length - 1]){
+
+                    let t2 = time2.insertRow();
+                    let t2_jogador = t2.insertCell();
+                    let t2_pos = t2.insertCell(); 
+                 
+                    t2_jogador.innerText = this.arrayJogador[i].nomeJogador;
+                    t2_pos.innerText = this.arrayJogador[i].pos;
+                }            
+            } else if (sorte == "Time 3"){
+                if(this.arrayJogador[i] === this.arrayJogador[this.arrayJogador.length - 1]){
+
+                    let t3 = time3.insertRow();
+                    let t3_jogador = t3.insertCell();
+                    let t3_pos = t3.insertCell(); 
+                 
+                    t3_jogador.innerText = this.arrayJogador[i].nomeJogador;
+                    t3_pos.innerText = this.arrayJogador[i].pos;
+                } 
+            } else {
+                alert("ERROR DE SORTEIO");
+            }
+                
         }
     }
 
-    sorteio() {
-        const 
+   
 
-        
+//sortear 
+/*
+
+let t1 = time1.insertRow();  
+                let t1_jogador = t1.insertCell();
+                let t1_pos = t1.insertCell(); 
+                 
+                t1_jogador.innerText = this.arrayJogador[i].nomeJogador;
+                t1_pos.innerText = this.arrayJogador[i].pos;      
+
+
+ if(sorte == "Time 1"){
+if(arrayJogador[i] === arrayJogador[arrayJogador.length - 1]){
+
+    sortear(jogador,pos){
+        let times = ["Time1","Time2","Time3"];
+        let sorteio = Math.floor(Math.random()*times.length);
+        console.log(times[sorteio]);
+
+        if(sorteio == Time1){
+            let t1 = time1.insertRow();
+
+            let t1_jogador = t1.insertCell();
+            let t1_pos = t1.insertCell(); 
+
+            t1_jogador.innerText = this.arrayJogador[i].nomeJogador;
+            t1_pos.innerText = this.arrayJogador[i].pos;
+        } else if (sorteio == Time2){
+            let t2 = time2.insertRow();
+
+            let t2_jogador = t2.insertCell();
+            let t2_pos = t2.insertCell(); 
+
+            t2_jogador.innerText = this.arrayJogador[i].nomeJogador;
+            t2_pos.innerText = this.arrayJogador[i].pos;
+        } else if (sorteio == Time3){
+            let t3 = time3.insertRow();
+
+            let t3_jogador = t3.insertCell();
+            let t3_pos = t3.insertCell(); 
+
+            t3_jogador.innerText = this.arrayJogador[i].nomeJogador;
+            t3_pos.innerText = this.arrayJogador[i].pos;
+        } else {
+            alert("ERROR DE SORTEIO");
+        }
     }
+    */
 
-    compararPOS(){
-        
-
-
-    }
 //adicionar
     adicionar(jogador){
         this.arrayJogador.push(jogador);
@@ -116,6 +203,7 @@ class Jogador {
             return true;
          }else{
             msg += msg + 'Vazio! Informe a Posição VALIDA! \n';
+
          }
 
         if(msg != ''){
@@ -124,9 +212,6 @@ class Jogador {
         }
         return true;
     }
-
-
-
 
     cancelar() {
         document.getElementById('jogador').value = '';

@@ -35,7 +35,9 @@ header{
     font-size: 20px;
     padding-right: 15px;
 }
-/* ENTRADAS */
+
+
+/* ENTRADAS 1 
 .titulo{
     text-align: center;
     width: 25%;
@@ -47,19 +49,65 @@ header{
 .btn{
     text-align: center;
     width: 25%;
+}*/
+
+/* ENTRADAS 2 */
+.titulo{
+    text-align: center;
+   
 }
+.lineInput{
+    text-align: center;
+   
+}
+.btn{
+    text-align: center;
+}
+
+
+
+/* Tabela GRID */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.grid1{
+    background-color: aqua;
+
+}
+
+.grid2{
+    background-color: red;
+    text-align: center;
+}
+
+.grid3{
+
+    background-color: rgb(23, 24, 82);
+    
+}
+.grid4{
+
+    background-color: rgb(23, 82, 43);
+    
+}
+
 /* Tabela */
 table{
     text-align: center;
-    width: 25%;
-    margin: 18px;
-    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 
 .tdbody{
     text-align: center;
-    width: 25%;
+    align-items: center;
+    border-spacing: 0px;
     
 }
 .tdbody img {

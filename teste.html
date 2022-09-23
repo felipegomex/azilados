@@ -7,6 +7,76 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="grid2">
+        <table border="1">
+          <thead>
+            <th>Jogador</th>
+            <th>Posição</th>
+          </thead>
+          <tbody id="time1" class="time1">
+            
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid3">
+        <table border="1">
+          <thead>
+            <th>Jogador</th>
+            <th>Posição</th>
+          </thead>
+          <tbody id="time2" class="time2">
+            
+          </tbody>
+        </table>
+      </div>
+
+      <div class="grid4">
+        <table border="1">
+          <thead>
+            <th>Jogador</th>
+            <th>Posição</th>
+          </thead>
+          <tbody id="time3" class="time3">
+            
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="grid">
+        <div class="grid1">
+          <div class="titulo">
+          <h2>Entre com os jogadores</h2>
+        </div>
+        
+        <div class="lineInput">
+          <label>Jogador: </label>
+          <input type="text" id="jogador">
+        </div>
+        
+        <div class="lineInput">
+          <label>Posição: </label>
+          <input type="text" id="pos" placeholder="LD ZAG LE MEI ATA">
+        </div>
+      
+        <div class="btn">
+        <br>
+          <button type='button' onclick="jogador.salvar()" id="btn1">Adicionar</button>
+          <button type='button' onclick="jogador.cancelar()">Limpar Campo</button>
+        </div>
+      
+        <table border="1">
+          <thead>
+            <th class="center">ID</th>
+            <th>Jogador</th>
+            <th>Posição</th>
+            <th class="center">Açoes</th>
+          </thead>
+          <tbody id="tbody" class="tdbody">
+            
+          </tbody>
+        </table>
+    </div>
     
 </body>
 </html>
